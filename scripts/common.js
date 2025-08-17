@@ -4,6 +4,7 @@
 		window.backendReady = (async () => {
 		  try {
 			const resp = await fetch('https://mahmudulhasan0101.github.io/CSTEM-Club-Frontend/assets/backendurl.txt', { cache: 'no-store' });
+			console.log(resp);
 			if (!resp.ok) throw new Error(`Failed to fetch backend URL: ${resp.status}`);
 			const raw = (await resp.text()).trim();
 
@@ -11,21 +12,14 @@
 			  throw new Error('backendurl.txt is empty or contains "null"');
 			}
 
-			// normalize: remove trailing slashes
 			window.backendURL = raw.replace(/\/+$/, '');
-			// optional: dispatch an event for non-awaiting code
 			window.dispatchEvent(new Event('backend-url-ready'));
 			return window.backendURL;
 		  } catch (err) {
 			console.error('Error reading backend URL:', err);
-			// fallback if you want a default instead of rejecting:
-			// window.backendURL = 'http://localhost:5005';
-			// return window.backendURL;
-			throw err; // keep rejecting so callers can handle it
+			throw err; 
 		  }
 		})();
-		
-		window.backendURL.replace("/null", "");
 		
 		
 		document.addEventListener("DOMContentLoaded", function () {
