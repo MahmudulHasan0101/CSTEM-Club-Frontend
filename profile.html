@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Chandpur STEM Club</title>
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/profile.css">
+</head>
+<body class="loading-active">
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+    <nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item active user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item active user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+
+    <div class="gapper"></div>
+    
+    <!-- Profile Content -->
+    <div class="profile-container">
+        <div class="profile-card glass-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <div class="avatar-placeholder avatarPlaceholder">
+                        <span id="avatarInitials">U</span>
+                    </div>
+                    <div class="status-badge verified" id="statusBadge">
+                        <span>✓ Verified</span>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1 id="profileName">Loading...</h1>
+                    <p id="profileInstitution">Loading...</p>
+                    <p class="member-since">Member since: <span id="joinDate">Loading...</span></p>
+                </div>
+                <button class="edit-btn" onclick="toggleEditMode() editBtn">
+                    <span>✏️ Edit Profile</span>
+                </button>
+            </div>
+
+            <!-- View Mode -->
+            <div class="profile-details viewMode">
+                <div class="detail-group">
+                    <label>Email Address</label>
+                    <p id="profileEmail">Loading...</p>
+                </div>
+                <div class="detail-group">
+                    <label>Full Name</label>
+                    <p id="viewFullName">Loading...</p>
+                </div>
+                <div class="detail-group">
+                    <label>Institution</label>
+                    <p id="viewInstitution">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Edit Mode -->
+            <div class="profile-details edit-mode editMode" style="display: none;">
+                <div class="form-group">
+                    <label for="editFullName">Full Name</label>
+                    <input type="text" id="editFullName" class="form-input" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="edit" id="Institution">Institution</label>
+                    <input type="text" id="editInstitution" class="form-input" placeholder="School/College/University">
+                </div>
+                <div class="edit-actions">
+                    <button class="cta-button secondary" onclick="cancelEdit()">Cancel</button>
+                    <button class="cta-button" onclick="saveProfile()">Save Changes</button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="profile-actions">
+                <button class="action-btn danger" onclick="logout()">
+                    <span>🚪 Logout</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Additional Cards -->
+        <div class="stats-grid">
+            <div class="stat-card glass-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                    <h3>Member Status</h3>
+                    <p id="membershipStatus">Active Member</p>
+                </div>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-info">
+                    <h3>Projects</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+            <div class="stat-card glass-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-info">
+                    <h3>Achievements</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay 
+    <div class="loading-overlay loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading your profile...</p>
+        </div>
+    </div>
+	-->
+
+    <!-- Login Required Overlay -->
+    <div class="login-required-overlay loginRequiredOverlay" style="display: none;">
+        <div class="login-required-card glass-card">
+            <h2>Login Required</h2>
+            <p>Please log in to view your profile.</p>
+            <button class="cta-button" onclick="window.location.href='/join'">Go to Login</button>
+        </div>
+    </div>
+
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/profile.js"></script>
+</body>
+</html>

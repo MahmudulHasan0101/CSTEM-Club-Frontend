@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandpur STEM Club</title>
+	<link rel="stylesheet" href="./styles/common.css">
+	<link rel="stylesheet" href="./styles/gallery.css">
+
+</head>
+<body class="loading-active">
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+	<nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item active"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item active"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+	
+	 <div class="container">
+        <!-- Gallery Header -->
+        <div class="gallery-header">
+            <h1>Gallery</h1>
+            <p>Explore remarkable moments of Chandpur STEM Club</p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be loaded here -->
+        </div>
+
+        <!-- Error Message (hidden by default) -->
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <h3>Unable to Load Images</h3>
+            <p>There was an error loading the gallery. Please check your internet connection or try again later.</p>
+            <button class="retry-btn" onclick="loadGallery()">Retry</button>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        </div>
+    </div>
+	
+	
+	<script src="./scripts/gallery.js"></script>
+    <script src="./scripts/common.js"></script>
+</body>
+</html>

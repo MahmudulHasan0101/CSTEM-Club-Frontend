@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandpur STEM Club</title>
+	<link rel="stylesheet" href="./styles/common.css">
+	<link rel="stylesheet" href="./styles/join.css">
+
+</head>
+<body class="loading-active">
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+    <nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item active guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item active guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+
+	
+	<div class="gapper"> </div>
+	<div class="glass-card" style="max-width: 500px; margin: 0 auto;">
+                <h1 style="text-align: center; margin-bottom: 30px;">Join Our Community</h1>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" class="form-input" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="institution">Institution</label>
+                    <input type="text" id="institution" class="form-input" placeholder="School/College/University">
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-top: 30px;">
+                    <button class="cta-button" style="flex: 1;" onclick="handleAuth('login')">Login</button>
+                    <button class="cta-button" style="flex: 1; background: var(--gradient-accent);" onclick="handleAuth('register')">Register</button>
+                </div>
+
+                <p style="text-align: center; margin-top: 20px; color: var(--text-muted);">
+                    By joining, you agree to our terms and conditions
+                </p>
+            </div>
+        </div>
+
+    <script src="./scripts/common.js"></script>
+	<script src="./scripts/join.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandpur STEM Club</title>
+	<link rel="stylesheet" href="./styles/common.css">
+	<link rel="stylesheet" href="./styles/notices.css">
+
+</head>
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+	<div class="gapper"></div>
+	<body class="loading-active">
+	    <nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item active"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item active"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+
+
+	<div class="container">
+        <div class="notices-container">
+            <div class="page-header">
+                <h1 class="page-title">Notices & Updates</h1>
+                <p class="page-subtitle">Stay informed with our latest announcements and system updates</p>
+            </div>
+
+            <div id="noticesContent">
+                <!-- Loading state -->
+                <div class="loading-card">
+                    <div class="loading-spinner"></div>
+                    <p style="margin-top: 20px; color: var(--text-secondary);">Loading notices...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gapper"></div>
+
+    <script src="./scripts/notice.js"></script>
+    <script src="./scripts/common.js"></script>
+</body>
+</html>

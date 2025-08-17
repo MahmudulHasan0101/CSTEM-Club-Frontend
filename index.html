@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandpur STEM Club</title>
+	<link rel="stylesheet" href="./styles/common.css">
+	<link rel="stylesheet" href="./styles/home.css">
+
+</head>
+<body class="loading-active">
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+    <nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item active"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item active"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="page active home">
+            <div class="hero">
+				<div class="logo">
+					<a href="index.html">
+						<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+					</a>
+				</div>
+                <h1>Chandpur STEM Club</h1>
+                <p>Inspiring the next generation of scientists, technologists, engineers, and mathematicians through hands-on learning and innovation, we emphasize core reasoning, critical thinking, and mathematical analysis over traditional rote memorization and purely history-based practices.</p>
+            </div>
+
+            <div class="features">
+                <div class="glass-card feature">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Our Focus</h3>
+                    <p>Critical thinking, Analytical Skill, Reasoning, finding students with hidden talents</p>
+                </div>
+                <div class="glass-card feature">
+                    <div class="feature-icon">🏹</div>
+                    <h3>Our Target</h3>
+                    <p>Inform you and help you crack IRO, IOI, IMO, IPho, IAAO, WRO, IChO etc</p>
+                </div>
+                <div class="glass-card feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Final Goal</h3>
+                    <p>Make YOU and Chandpur famous :D</p>
+                </div>
+            </div>
+        </div>      
+
+    <script src="./scripts/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandpur STEM Club</title>
+	<link rel="stylesheet" href="./styles/common.css">
+	<link rel="stylesheet" href="./styles/contact.css">
+
+</head>
+<body class="loading-active">
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+    <nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item active"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item active"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+	
+	<div class="container">
+        <!-- Hero Section -->
+        <section class="hero contact-hero">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </section>
+
+        <!-- Contact Numbers Section -->
+        <section class="contact-numbers">
+            <div class="glass-card contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Call Us</h3>
+                <div class="contact-details">
+                    <a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a>
+                    <a href="tel:+1098765432" class="contact-link">+1 (098) 765-432</a>
+                </div>
+            </div>
+            <div class="glass-card contact-card">
+                <div class="contact-icon">✉️</div>
+                <h3>Email Us</h3>
+                <div class="contact-details">
+                    <a href="mailto:hello@company.com" class="contact-link">hello@company.com</a>
+                    <a href="mailto:support@company.com" class="contact-link">support@company.com</a>
+                </div>
+            </div>
+            <div class="glass-card contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Visit Us</h3>
+                <div class="contact-details">
+                    <p class="address">123 Business Street<br>City, State 12345<br>United States</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Links Section -->
+        <section class="platform-links">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="platforms-grid">
+                <a href="#" class="platform-link" style="--platform-color: #1DA1F2">
+                    <div class="platform-icon">🐦</div>
+                    <span>Twitter</span>
+                </a>
+                <a href="#" class="platform-link" style="--platform-color: #4267B2">
+                    <div class="platform-icon">📘</div>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="platform-link" style="--platform-color: #0077B5">
+                    <div class="platform-icon">💼</div>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" class="platform-link" style="--platform-color: #E4405F">
+                    <div class="platform-icon">📷</div>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="platform-link" style="--platform-color: #FF0000">
+                    <div class="platform-icon">📺</div>
+                    <span>YouTube</span>
+                </a>
+                <a href="#" class="platform-link" style="--platform-color: #7289DA">
+                    <div class="platform-icon">🎮</div>
+                    <span>Discord</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What are your business hours?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We're open Monday through Friday from 9:00 AM to 6:00 PM EST. Our customer support team is available 24/7 through email and our online chat system.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How quickly do you respond to inquiries?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond to email inquiries within 2-4 business hours. Phone calls are answered immediately during business hours. For urgent matters, please call our priority support line.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer technical support?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We provide comprehensive technical support for all our products and services. Our technical team is available via phone, email, and live chat. We also offer remote assistance when needed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I schedule a consultation?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer free 30-minute consultations to discuss your needs. You can schedule one by calling us directly or using our online booking system. We're happy to meet in person, over the phone, or via video call.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, bank transfers, and for enterprise clients, we can arrange invoicing with NET 30 payment terms. We also accept cryptocurrency payments for certain services.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you have a refund policy?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a 30-day money-back guarantee on most of our services. If you're not completely satisfied, contact us within 30 days for a full refund. Custom work and consulting services have different terms which we'll discuss upfront.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</div>
+
+    <div class="gapper"></div>
+
+    <script src="./scripts/contact.js"></script>
+	<script src="./scripts/common.js"></script>
+</body>
+</html>

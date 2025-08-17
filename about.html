@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandpur STEM Club</title>
+	<link rel="stylesheet" href="./styles/common.css">
+	<link rel="stylesheet" href="./styles/about.css">
+
+</head>
+<body class="loading-active">
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+	<nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item active"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item active"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+	
+
+	<div class="gapper"> </div>
+	
+	
+	
+	<div class="container">
+        <!-- About Introduction -->
+        <section class="about-intro">
+            <h2>About Our Club</h2>
+            <p>
+                Welcome to our vibrant community where innovation meets collaboration. We are a diverse group of passionate individuals united by our shared vision of excellence and growth.
+            </p>
+            <p>
+                Since our founding, we have been dedicated to fostering creativity, building meaningful connections, and making a positive impact in our community through various initiatives and projects.
+            </p>
+            <p>
+                Explore our different sections below to meet the amazing people who make our club the dynamic organization it is today.
+            </p>
+        </section>
+
+        <!-- Club Sections -->
+        <div class="sections-container">
+            <!-- Executive Board -->
+            <div class="section-card" onclick="toggleSection(this)">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <span class="section-icon">👑</span>
+                        Executive Board
+                    </h3>
+                    <span class="section-toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-description">
+                        The Executive Board provides strategic leadership and oversight for all club activities, ensuring smooth operations and driving our mission forward.
+                    </div>
+                    <div class="members-grid">
+                        <div class="member-card">
+                            <div class="member-avatar">AJ</div>
+                            <div class="member-name">Alex Johnson</div>
+                            <div class="member-position">President</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">SM</div>
+                            <div class="member-name">Sarah Martinez</div>
+                            <div class="member-position">Vice President</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">DL</div>
+                            <div class="member-name">David Lee</div>
+                            <div class="member-position">Secretary</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">EP</div>
+                            <div class="member-name">Emily Parker</div>
+                            <div class="member-position">Treasurer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Team -->
+            <div class="section-card" onclick="toggleSection(this)">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <span class="section-icon">💻</span>
+                        Technical Team
+                    </h3>
+                    <span class="section-toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-description">
+                        Our technical experts handle all digital infrastructure, website development, and technology-driven initiatives to keep our club at the forefront of innovation.
+                    </div>
+                    <div class="members-grid">
+                        <div class="member-card">
+                            <div class="member-avatar">MK</div>
+                            <div class="member-name">Michael Kim</div>
+                            <div class="member-position">Tech Lead</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">JC</div>
+                            <div class="member-name">Jessica Chen</div>
+                            <div class="member-position">Web Developer</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">RG</div>
+                            <div class="member-name">Ryan Garcia</div>
+                            <div class="member-position">Database Admin</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">LT</div>
+                            <div class="member-name">Lisa Thompson</div>
+                            <div class="member-position">UI/UX Designer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events & Activities -->
+            <div class="section-card" onclick="toggleSection(this)">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <span class="section-icon">🎉</span>
+                        Events & Activities
+                    </h3>
+                    <span class="section-toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-description">
+                        The heart of our club's social life, this team plans and executes engaging events, workshops, and activities that bring our community together.
+                    </div>
+                    <div class="members-grid">
+                        <div class="member-card">
+                            <div class="member-avatar">NR</div>
+                            <div class="member-name">Nina Rodriguez</div>
+                            <div class="member-position">Events Coordinator</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">TW</div>
+                            <div class="member-name">Tom Wilson</div>
+                            <div class="member-position">Activities Manager</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">AG</div>
+                            <div class="member-name">Anna Green</div>
+                            <div class="member-position">Workshop Planner</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">KS</div>
+                            <div class="member-name">Kevin Smith</div>
+                            <div class="member-position">Logistics Coordinator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing & Outreach -->
+            <div class="section-card" onclick="toggleSection(this)">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <span class="section-icon">📢</span>
+                        Marketing & Outreach
+                    </h3>
+                    <span class="section-toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-description">
+                        This creative team manages our brand presence, social media, and community outreach efforts to expand our reach and engage with new members.
+                    </div>
+                    <div class="members-grid">
+                        <div class="member-card">
+                            <div class="member-avatar">SB</div>
+                            <div class="member-name">Sophie Brown</div>
+                            <div class="member-position">Marketing Director</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">JD</div>
+                            <div class="member-name">Jake Davis</div>
+                            <div class="member-position">Social Media Manager</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">MW</div>
+                            <div class="member-name">Maya Williams</div>
+                            <div class="member-position">Content Creator</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">BJ</div>
+                            <div class="member-name">Ben Jackson</div>
+                            <div class="member-position">Community Liaison</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finance & Operations -->
+            <div class="section-card" onclick="toggleSection(this)">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <span class="section-icon">💰</span>
+                        Finance & Operations
+                    </h3>
+                    <span class="section-toggle">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-description">
+                        Ensuring financial stability and operational efficiency, this team manages budgets, resources, and day-to-day administrative functions.
+                    </div>
+                    <div class="members-grid">
+                        <div class="member-card">
+                            <div class="member-avatar">RM</div>
+                            <div class="member-name">Rachel Miller</div>
+                            <div class="member-position">Finance Manager</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">CH</div>
+                            <div class="member-name">Chris Hall</div>
+                            <div class="member-position">Budget Analyst</div>
+                        </div>
+                        <div class="member-card">
+                            <div class="member-avatar">PT</div>
+                            <div class="member-name">Priya Patel</div>
+                            <div class="member-position">Operations Coordinator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gapper"></div>
+    </div>
+	
+	
+    <script src="./scripts/common.js"></script>
+	<script src="./scripts/about.js"></script>
+</body>
+</html>

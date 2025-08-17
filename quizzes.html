@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes - Interactive Learning Platform</title>
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/quizes.css">	
+</head>
+<body class="loading-active">
+	<div class="logo-icon">
+		<img src="./assets/logo.png" alt="Chandpur STEM Club Logo">
+	</div>
+	    <nav class="desktop-nav">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">HOME</a></li>
+            <li class="nav-item"><a href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="notices.html">NOTICES</a></li>
+			<li class="nav-item active user-item"><a href="quizzes.html">QUIZZES</a></li>
+            <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            <li class="nav-item guest-item"><a href="join.html">JOIN</a></li>
+            <li class="nav-item user-item"><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+            <li class="mobile-menu-item"><a href="index.html" onclick="closeMobileMenu()">HOME</a></li>
+            <li class="mobile-menu-item"><a href="about.html" onclick="closeMobileMenu()">ABOUT</a></li>
+            <li class="mobile-menu-item"><a href="notices.html" onclick="closeMobileMenu()">NOTICES</a></li>
+            <li class="mobile-menu-item active user-item"><a href="quizzes.html" onclick="closeMobileMenu()">QUIZZES</a></li>
+            <li class="mobile-menu-item"><a href="gallery.html" onclick="closeMobileMenu()">GALLERY</a></li>
+            <li class="mobile-menu-item"><a href="contact.html" onclick="closeMobileMenu()">CONTACT</a></li>
+            <li class="mobile-menu-item guest-item"><a href="join.html" onclick="closeMobileMenu()">JOIN</a></li>
+            <li class="mobile-menu-item user-item"><a href="profile.html" onclick="closeMobileMenu()">PROFILE</a></li>
+        </ul>
+    </div>
+	
+	
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="quiz-container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Available Quizzes</h1>
+                <p>Test your knowledge and compete with others</p>
+                
+                <!-- Search and Filter Controls -->
+                <div class="quiz-controls" style="margin-top: 30px;">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search quizzes..." onkeyup="searchQuizzes(this.value)">
+                    </div>
+                    <div class="filter-container">
+                        <select id="difficulty-filter" onchange="filterQuizzes('difficulty', this.value)">
+                            <option value="all">All Difficulties</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                        <select id="category-filter" onchange="filterQuizzes('category', this.value)">
+                            <option value="all">All Categories</option>
+                            <option value="Programming">Programming</option>
+                            <option value="Framework">Framework</option>
+                            <option value="Styling">Styling</option>
+                            <option value="Backend">Backend</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Grid -->
+            <div id="quiz-grid" class="quiz-grid" style="display: none;">
+                <!-- Quizzes will be dynamically loaded here -->
+            </div>
+
+            <!-- No Quizzes Message -->
+            <div id="no-quizzes" style="display: none;" class="glass-card">
+                <h3>No Quizzes Available</h3>
+                <p>Check back later for new quizzes!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Taking Interface -->
+    <div id="quiz-interface" class="quiz-interface">
+        <div class="quiz-content">
+            <!-- Quiz Progress -->
+            <div class="quiz-progress">
+                <div class="progress-info">
+                    <span>Question <span id="current-question">1</span> of <span id="total-questions">10</span></span>
+                </div>
+                <div class="timer" id="timer">
+                    <span>⏱️</span>
+                    <span id="timer-display">05:00</span>
+                </div>
+            </div>
+
+            <!-- Question Container -->
+            <div class="">
+                <div class="question-title" id="question-text"></div>
+                <div class="options-container" id="options-container">
+                    <!-- Options will be dynamically loaded -->
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="quiz-navigation">
+                <button class="nav-button" id="prev-button" onclick="previousQuestion()" disabled>Previous</button>
+                <button class="nav-button" id="next-button" onclick="nextQuestion()">Next</button>
+                <button class="nav-button submit-button" id="submit-button" onclick="submitQuiz()" style="display: none;">Submit Quiz</button>
+            </div>
+        </div>
+    </div>
+
+
+	<script src="./scripts/common.js"></script>
+	<script src="./scripts/quizzes.js"></script>
+</body>
+</html>
