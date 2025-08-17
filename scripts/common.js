@@ -25,7 +25,7 @@
 		document.addEventListener("DOMContentLoaded", function () {
 			startLoading();
 			
-			fetch(`${window.backendURL}/api/isloggedin`)
+			fetch(`https://ebe86798716d.ngrok-free.app/api/isloggedin`)
 				.then(res => res.json())
 				.then(data => {
 					const userItem = document.querySelectorAll(".user-item");
