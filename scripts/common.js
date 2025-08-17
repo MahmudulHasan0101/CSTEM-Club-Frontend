@@ -3,7 +3,7 @@
 		// promise that resolves when backendURL is loaded (or rejects on error)
 		window.backendReady = (async () => {
 		  try {
-			const resp = await fetch('/assets/backendurl.txt', { cache: 'no-store' });
+			const resp = await fetch('https://mahmudulhasan0101.github.io/CSTEM-Club-Frontend/assets/backendurl.txt', { cache: 'no-store' });
 			if (!resp.ok) throw new Error(`Failed to fetch backend URL: ${resp.status}`);
 			const raw = (await resp.text()).trim();
 
