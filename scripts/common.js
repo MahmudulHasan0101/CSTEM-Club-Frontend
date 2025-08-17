@@ -1,4 +1,4 @@
-		window.backendURL = "";
+		window.backendURL = "https://ebe86798716d.ngrok-free.app/";
 
 		// promise that resolves when backendURL is loaded (or rejects on error)
 		window.backendReady = (async () => {
