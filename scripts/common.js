@@ -1,25 +1,26 @@
-		window.backendURL = "https://ebe86798716d.ngrok-free.app/";
+		window.backendURL = "";
 
 		// promise that resolves when backendURL is loaded (or rejects on error)
-		window.backendReady = (async () => {
+		async init() {
 		  try {
 			const resp = await fetch('https://mahmudulhasan0101.github.io/CSTEM-Club-Frontend/assets/backendurl.txt', { cache: 'no-store' });
 			if (!resp.ok) throw new Error(`Failed to fetch backend URL: ${resp.status}`);
 			const raw = (await resp.text()).trim();
-			console.log(raw);
 
 			if (!raw || raw.toLowerCase() === 'null') {
 			  throw new Error('backendurl.txt is empty or contains "null"');
 			}
-
-			window.backendURL = raw.replace(/\/+$/, '');
-			window.dispatchEvent(new Event('backend-url-ready'));
+			window.backendURL = raw;
+			console.log(window.backendURL);
+			console.log(await fetch("https://ebe86798716d.ngrok-free.app/"));
 			return window.backendURL;
 		  } catch (err) {
 			console.error('Error reading backend URL:', err);
 			throw err; 
 		  }
 		})();
+
+		init();
 		
 		
 		document.addEventListener("DOMContentLoaded", function () {
