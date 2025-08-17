@@ -18,7 +18,7 @@
 			console.error('Error reading backend URL:', err);
 			throw err; 
 		  }
-		})();
+		};
 
 		init();
 		
