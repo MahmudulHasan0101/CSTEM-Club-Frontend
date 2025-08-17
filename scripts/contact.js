@@ -1,4 +1,5 @@
-        function toggleFAQ(question) {
+
+		function toggleFAQ(question) {
             const faqItem = question.parentElement;
             const answer = faqItem.querySelector('.faq-answer');
             const toggle = question.querySelector('.faq-toggle');

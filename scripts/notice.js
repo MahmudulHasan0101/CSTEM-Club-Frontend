@@ -1,7 +1,6 @@
-
 class NoticeManager {
     constructor() {
-        this.apiEndpoint = '/api/notices'; // Backend API endpoint
+        this.apiEndpoint = `${window.backendURL}/api/notices`; // Backend API endpoint
         this.noticesContainer = document.getElementById('noticesContent');
         this.init();
     }

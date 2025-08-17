@@ -10,7 +10,7 @@ async function loadProfile() {
     const loginRequiredOverlay = document.getElementById('loginRequiredOverlay');
     
     try {
-        const response = await fetch('/api/profile');
+        const response = await fetch('${window.backendURL}/api/profile');
         const data = await response.json();
 
         if (response.ok) {
@@ -109,7 +109,7 @@ async function saveProfile() {
     }
     
     try {
-        const response = await fetch('/api/profile', {
+        const response = await fetch('${window.backendURL}/api/profile', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -140,7 +140,7 @@ async function saveProfile() {
 async function logout() {
     if (confirm('Are you sure you want to logout?')) {
         try {
-            const response = await fetch('/api/logout', {
+            const response = await fetch('${window.backendURL}/api/logout', {
                 method: 'POST'
             });
             

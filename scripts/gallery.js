@@ -1,6 +1,6 @@
 		let currentFilter = 'all';
         let galleryItems = [];
-
+		
         // Load gallery on page load
         document.addEventListener('DOMContentLoaded', function() {
             loadGallery();
@@ -45,7 +45,7 @@
                 // Simulate API call delay
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 
-                const response = await fetch('/api/gallery');
+                const response = await fetch(`${window.backendURL}/api/gallery`);
                 const data = await response.json();
                 
                 if (!data || data.length === 0) {

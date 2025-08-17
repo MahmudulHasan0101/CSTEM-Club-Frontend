@@ -22,7 +22,7 @@
         async function fetchQuizzes() {
             try {
 				console.log("getting ");
-                const response = await fetch(`/api/quizzes`);
+                const response = await fetch(`${window.backendURL}/api/quizzes`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch quizzes');
                 }
@@ -38,7 +38,7 @@
         // Fetch quiz questions from backend
         async function fetchQuizQuestions(quizId) {
             try {
-                const response = await fetch(`/api/quizzes/${quizId}/questions`);
+                const response = await fetch(`${window.backendURL}/api/quizzes/${quizId}/questions`);
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch quiz questions');

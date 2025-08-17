@@ -1,7 +1,37 @@
+		window.backendURL = "";
+
+		// promise that resolves when backendURL is loaded (or rejects on error)
+		window.backendReady = (async () => {
+		  try {
+			const resp = await fetch('/assets/backendurl.txt', { cache: 'no-store' });
+			if (!resp.ok) throw new Error(`Failed to fetch backend URL: ${resp.status}`);
+			const raw = (await resp.text()).trim();
+
+			if (!raw || raw.toLowerCase() === 'null') {
+			  throw new Error('backendurl.txt is empty or contains "null"');
+			}
+
+			// normalize: remove trailing slashes
+			window.backendURL = raw.replace(/\/+$/, '');
+			// optional: dispatch an event for non-awaiting code
+			window.dispatchEvent(new Event('backend-url-ready'));
+			return window.backendURL;
+		  } catch (err) {
+			console.error('Error reading backend URL:', err);
+			// fallback if you want a default instead of rejecting:
+			// window.backendURL = 'http://localhost:5005';
+			// return window.backendURL;
+			throw err; // keep rejecting so callers can handle it
+		  }
+		})();
+		
+		window.backendURL.replace("/null", "");
+		
+		
 		document.addEventListener("DOMContentLoaded", function () {
 			startLoading();
 			
-			fetch("/api/isloggedin")
+			fetch(`${window.backendURL}/api/isloggedin`)
 				.then(res => res.json())
 				.then(data => {
 					const userItem = document.querySelectorAll(".user-item");

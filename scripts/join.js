@@ -16,7 +16,7 @@ async function handleAuth(action) {
         return;
     }
 
-    const url = action === 'login' ? '/api/login' : '/api/register';
+    const url = action === 'login' ? `${window.backendURL}/api/login` : `${window.backendURL}/api/register`;
     const body = action === 'login'
         ? { email, password }
         : { email, password, fullname, institution };
@@ -186,7 +186,7 @@ function showResendVerificationOption(email) {
 
 async function logout() {
     try {
-        const response = await fetch('/api/logout', { method: 'POST' });
+        const response = await fetch(`${window.backendURL}/api/logout`, { method: 'POST' });
         const data = await response.json();
         showMessage(data.message, 'success');
         
@@ -236,7 +236,7 @@ document.head.appendChild(style);
 // Check if user is already logged in when page loads
 document.addEventListener('DOMContentLoaded', async function() {
     try {
-        const response = await fetch('/api/profile');
+        const response = await fetch(`${window.backendURL}/api/profile`);
         if (response.ok) {
             // User is already logged in, redirect to profile
             const data = await response.json();
