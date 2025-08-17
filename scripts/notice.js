@@ -12,6 +12,7 @@ class NoticeManager {
     async loadNotices() {
         try {
             this.showLoading();
+            console.log(this.apiEndpoint);
             const response = await fetch(this.apiEndpoint);
             
             if (!response.ok) {
