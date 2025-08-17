@@ -4,9 +4,9 @@
 		window.backendReady = (async () => {
 		  try {
 			const resp = await fetch('https://mahmudulhasan0101.github.io/CSTEM-Club-Frontend/assets/backendurl.txt', { cache: 'no-store' });
-			console.log(resp);
 			if (!resp.ok) throw new Error(`Failed to fetch backend URL: ${resp.status}`);
 			const raw = (await resp.text()).trim();
+			console.log(raw);
 
 			if (!raw || raw.toLowerCase() === 'null') {
 			  throw new Error('backendurl.txt is empty or contains "null"');
